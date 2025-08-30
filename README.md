@@ -134,7 +134,7 @@ This project is open source and available under the MIT License.
 ## 🔗 Links
 
 - **Repository**: https://github.com/e-esakman/ecovault
-- **Live Demo**: [Deploy the website to see it in action]
+- **Live Demo**: [https://expo.dev/accounts/muffinlearns/projects/ecovault-mobile/builds/8de702b2-66a7-49d8-bef9-216ef65b5710]
 
 ---
 
