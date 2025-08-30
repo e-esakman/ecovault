@@ -1,0 +1,60 @@
+{
+    "name": "EcoVault - Climate Action Platform",
+    "short_name": "EcoVault",
+    "description": "Making Earth Greener Together - Track your environmental impact and earn rewards",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#34D399",
+    "orientation": "portrait-primary",
+    "categories": ["lifestyle", "productivity", "education"],
+    "lang": "en",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='812' viewBox='0 0 375 812'%3E%3Crect width='375' height='812' fill='%2334D399'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' fill='white'%3EEcoVault%3C/text%3E%3C/svg%3E",
+            "sizes": "375x812",
+            "type": "image/svg+xml",
+            "form_factor": "narrow"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Quick Scan",
+            "short_name": "Scan",
+            "description": "Quickly scan an item for recycling info",
+            "url": "/?action=scan",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📸%3C/text%3E%3C/svg%3E",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Community",
+            "short_name": "Community",
+            "description": "Check community activities",
+            "url": "/?action=community",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👥%3C/text%3E%3C/svg%3E",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}

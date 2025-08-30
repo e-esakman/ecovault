@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVault - Climate Action Platform</title>
+    <meta name="theme-color" content="#10b981">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-indicators">
+                <div class="signal-strength">
+                    <div class="signal-bar"></div>
+                    <div class="signal-bar"></div>
+                    <div class="signal-bar"></div>
+                    <div class="signal-bar"></div>
+                </div>
+                <div class="battery-indicator">
+                    <div class="battery-level"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-content">
+            <!-- Welcome Screen -->
+            <div class="screen welcome-screen active" id="welcome-screen">
+                <div class="welcome-content">
+                    <h1 class="app-title">EcoVault</h1>
+                    <div class="logo">
+                        <img src="image/logo.png" alt="EcoVault Logo" />
+                    </div>
+                    <p class="tagline">Track your eco-actions<br>Earn rewards<br>Join your community</p>
+                </div>
+                <div class="welcome-actions">
+                    <button class="btn btn-primary" onclick="showScreen('dashboard-screen')">Get started</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Screen -->
+            <div class="screen dashboard-screen" id="dashboard-screen">
+                <div class="screen-header">
+                    <h2 class="greeting">Good morning!</h2>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Dashboard</h3>
+                    <div class="points-display">
+                        <span class="points-number">450</span>
+                        <span class="points-label">pts</span>
+                    </div>
+                    <div class="weekly-streak">
+                        <span class="streak-label">Weekly streak</span>
+                        <div class="streak-dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <h3>📊 This Week's Impact</h3>
+                    <div class="impact-stats">
+                        <div class="impact-item">
+                            <div class="impact-icon">🌍</div>
+                            <div class="impact-content">
+                                <div class="impact-label">CO₂ Saved</div>
+                                <div class="impact-value">12.5kg</div>
+                                <div class="impact-change">+2.1kg</div>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">♻️</div>
+                            <div class="impact-content">
+                                <div class="impact-label">Items Recycled</div>
+                                <div class="impact-value">23</div>
+                                <div class="impact-change">+5</div>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">🚲</div>
+                            <div class="impact-content">
+                                <div class="impact-label">Green Commutes</div>
+                                <div class="impact-value">5</div>
+                                <div class="impact-change">+2</div>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">🌳</div>
+                            <div class="impact-content">
+                                <div class="impact-label">Trees Planted</div>
+                                <div class="impact-value">2</div>
+                                <div class="impact-change">+1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-items">
+                    <div class="action-item" onclick="earnPoints('recycle', 10)">
+                        <div class="action-content">
+                            <div class="action-icon">♻️</div>
+                            <span class="action-text">Recycle</span>
+                        </div>
+                        <span class="action-points">+10 pts</span>
+                    </div>
+                    <div class="action-item" onclick="earnPoints('bike', 20)">
+                        <div class="action-content">
+                            <div class="action-icon">🚲</div>
+                            <span class="action-text">I biked to work</span>
+                        </div>
+                        <span class="action-points">+20 pts</span>
+                    </div>
+                    <div class="action-item" onclick="earnPoints('plant', 50)">
+                        <div class="action-content">
+                            <div class="action-icon">🌳</div>
+                            <span class="action-text">I planted a tree</span>
+                        </div>
+                        <span class="action-points">+50 pts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Screen -->
+            <div class="screen social-screen" id="social-screen">
+                <div class="social-header">
+                    <h2>For You</h2>
+                    <div class="social-actions">
+                        <button class="social-btn">🔍</button>
+                        <button class="social-btn">➕</button>
+                    </div>
+                </div>
+
+                <div class="social-feed">
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="user-avatar" style="background: #10b981;">S</div>
+                            <div class="user-info">
+                                <div class="username">Sarah Johnson</div>
+                                <div class="post-time">2h</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-image">
+                                <img src="image/tree_plantation.jpg" alt="Tree Planting" class="post-img" />
+                            </div>
+                            <div class="post-text">Just planted 5 trees in the local park! 🌳 Every tree counts for our planet 🌍</div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action" onclick="likePost(1)">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count">24</span>
+                            </button>
+                            <button class="post-action">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count">8</span>
+                            </button>
+                            <button class="post-action">
+                                <span class="action-icon">📤</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="user-avatar" style="background: #3b82f6;">M</div>
+                            <div class="user-info">
+                                <div class="username">Mike Chen</div>
+                                <div class="post-time">4h</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-image">
+                                <img src="image/ocean_cleanup.jpg" alt="Beach Cleanup" class="post-img" />
+                            </div>
+                            <div class="post-text">Amazing beach cleanup today! Collected 50+ plastic bottles 🏖️ #SaveOurOceans</div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action" onclick="likePost(2)">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count">42</span>
+                            </button>
+                            <button class="post-action">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count">15</span>
+                            </button>
+                            <button class="post-action">
+                                <span class="action-icon">📤</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="user-avatar" style="background: #f59e0b;">E</div>
+                            <div class="user-info">
+                                <div class="username">Emma Davis</div>
+                                <div class="post-time">6h</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-text">Week 3 of biking to work! 🚲 Saved 15kg of CO₂ emissions so far. Small changes, big impact! 💚</div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action" onclick="likePost(3)">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count">18</span>
+                            </button>
+                            <button class="post-action">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count">5</span>
+                            </button>
+                            <button class="post-action">
+                                <span class="action-icon">📤</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Screen -->
+            <div class="screen upload-screen" id="upload-screen">
+                <div class="screen-header">
+                    <h2>Upload Image</h2>
+                </div>
+                <div class="upload-container">
+                    <div class="upload-area" onclick="triggerFileUpload()">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">Upload from Gallery</div>
+                        <div class="upload-subtext">Tap to select image</div>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileUpload(event)">
+                </div>
+                <div class="quick-actions">
+                    <div class="quick-action" onclick="earnPoints('recycle', 10)">
+                        <div class="quick-icon">♻️</div>
+                        <span>Recycle</span>
+                        <span class="points">+10</span>
+                    </div>
+                    <div class="quick-action" onclick="earnPoints('bike', 20)">
+                        <div class="quick-icon">🚲</div>
+                        <span>Bike</span>
+                        <span class="points">+20</span>
+                    </div>
+                    <div class="quick-action" onclick="earnPoints('plant', 50)">
+                        <div class="quick-icon">🌳</div>
+                        <span>Plant</span>
+                        <span class="points">+50</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organization Screen -->
+            <div class="screen organization-screen" id="organization-screen">
+                <div class="screen-header">
+                    <h2>Organizations</h2>
+                    <button class="map-toggle" onclick="toggleMapView()">🗺️</button>
+                </div>
+                <div class="location-header">
+                    <div class="location-info">
+                        <span class="location-icon">📍</span>
+                        <span class="location-text">Close to you</span>
+                    </div>
+                </div>
+                <div class="map-container" id="map-container" style="display: none;">
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <div class="map-pin" style="top: 30%; left: 40%;">
+                                <div class="pin-icon">🌳</div>
+                                <div class="pin-label">Tree Planting</div>
+                            </div>
+                            <div class="map-pin" style="top: 60%; left: 70%;">
+                                <div class="pin-icon">🏖️</div>
+                                <div class="pin-label">Beach Cleanup</div>
+                            </div>
+                            <div class="map-pin" style="top: 45%; left: 25%;">
+                                <div class="pin-icon">♻️</div>
+                                <div class="pin-label">Recycling Drive</div>
+                            </div>
+                        </div>
+                        <div class="map-controls">
+                            <button class="map-btn" onclick="toggleMapView()">📋 List View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="organization-list" id="organization-list">
+                    <div class="org-card">
+                        <div class="org-header">
+                            <div class="org-icon">🌳</div>
+                            <div class="org-info">
+                                <div class="org-name">Green Earth Foundation</div>
+                                <div class="org-distance">0.8 km away</div>
+                            </div>
+                            <div class="org-status active">Active</div>
+                        </div>
+                        <div class="org-event">
+                            <div class="event-title">Community Tree Planting</div>
+                            <div class="event-details">
+                                <span class="event-time">📅 Today, 2:00 PM</span>
+                                <span class="event-participants">👥 12 joined</span>
+                            </div>
+                        </div>
+                        <div class="org-actions">
+                            <button class="btn-join">Join Event</button>
+                            <button class="btn-directions">📍 Directions</button>
+                        </div>
+                    </div>
+                    <div class="org-card">
+                        <div class="org-header">
+                            <div class="org-icon">🏖️</div>
+                            <div class="org-info">
+                                <div class="org-name">Ocean Cleanup Initiative</div>
+                                <div class="org-distance">1.2 km away</div>
+                            </div>
+                            <div class="org-status active">Active</div>
+                        </div>
+                        <div class="org-event">
+                            <div class="event-title">Beach Cleanup Drive</div>
+                            <div class="event-details">
+                                <span class="event-time">📅 Tomorrow, 9:00 AM</span>
+                                <span class="event-participants">👥 8 joined</span>
+                            </div>
+                        </div>
+                        <div class="org-actions">
+                            <button class="btn-join">Join Event</button>
+                            <button class="btn-directions">📍 Directions</button>
+                        </div>
+                    </div>
+                    <div class="org-card">
+                        <div class="org-header">
+                            <div class="org-icon">♻️</div>
+                            <div class="org-info">
+                                <div class="org-name">Recycle Right Community</div>
+                                <div class="org-distance">2.1 km away</div>
+                            </div>
+                            <div class="org-status upcoming">Upcoming</div>
+                        </div>
+                        <div class="org-event">
+                            <div class="event-title">Neighborhood Recycling Drive</div>
+                            <div class="event-details">
+                                <span class="event-time">📅 This Weekend</span>
+                                <span class="event-participants">👥 5 joined</span>
+                            </div>
+                        </div>
+                        <div class="org-actions">
+                            <button class="btn-join">Join Event</button>
+                            <button class="btn-directions">📍 Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-item active" onclick="showScreen('dashboard-screen')">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Home</div>
+            </button>
+            <button class="nav-item" onclick="showScreen('social-screen')">
+                <div class="nav-icon">👥</div>
+                <div class="nav-label">Social</div>
+            </button>
+            <button class="nav-item" onclick="showScreen('upload-screen')">
+                <div class="nav-icon">📁</div>
+                <div class="nav-label">Upload</div>
+            </button>
+            <button class="nav-item" onclick="showScreen('organization-screen')">
+                <div class="nav-icon">🏢</div>
+                <div class="nav-label">Organizations</div>
+            </button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
