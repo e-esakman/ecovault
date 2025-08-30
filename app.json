@@ -1,29 +1,43 @@
 {
   "expo": {
-    "name": "EcoVault-Mobile",
-    "slug": "EcoVault-Mobile",
+    "name": "EcoVault",
+    "slug": "ecovault-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "description": "Track your eco-actions, earn rewards, and join your community in making a positive environmental impact.",
+    "primaryColor": "#10b981",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#10b981"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ecovault.mobile"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#10b981"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.ecovault.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "privacy": "public",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "afe53563-907d-4cc8-81bd-7526c370aa5f"
+      }
+    },
+    "owner": "muffinlearns"
   }
 }
