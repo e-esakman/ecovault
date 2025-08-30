@@ -10,6 +10,10 @@ EcoVault is a comprehensive climate action platform that gamifies environmental 
 - **Impact Tracking**: Monitor your weekly environmental impact with detailed statistics
 - **Cross-Platform**: Available as both mobile app and web application
 
+## Want to see the mvp of it 
+- https://expo.dev/accounts/muffinlearns/projects/ecovault-mobile/builds/8de702b2-66a7-49d8-bef9-216ef65b5710
+- Go to the link, click on the install, scan the QR on ur phone & it will install the apk.
+
 ## 📱 Mobile App (React Native)
 
 The mobile app provides a native experience with full device integration.
